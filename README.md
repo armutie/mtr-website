@@ -79,9 +79,9 @@ Tips:
 
 ## Contact form (FormSubmit)
 
-The form emails messages to **medtechrobotics@outlook.com** through [FormSubmit](https://formsubmit.co). No backend or account needed.
+The form emails messages to the team inbox through [FormSubmit](https://formsubmit.co). No backend or account needed.
 
-- The destination address is in the form's `action` URL in `index.html`: `https://formsubmit.co/ajax/medtechrobotics@outlook.com`. Change the address there to route messages elsewhere.
+- The form's `action` URL in `index.html` uses FormSubmit's alias string (`be4be7776c96d5d253c353eadb461c13`) instead of the email address, so the address is not exposed in the page source. To route messages elsewhere, put the new address in the URL, activate it, then swap in the new alias string FormSubmit emails you.
 - **First-time activation:** the first submission sends a confirmation email to that address. Click the link in it, and later messages are delivered normally.
 - Optional: after activation, FormSubmit gives you a random alias string. Replace the email in the `action` URL with it so the address isn't visible in the page source.
 - `js/main.js` submits the form with `fetch`, so visitors stay on the page and see a green success or red error message.
